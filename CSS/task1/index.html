@@ -1,84 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Styled Table</title>
     <style>
-      .table-container {
-        font-family: Arial, sans-serif;
-        width: 800px;
-        margin: 20px;
-      }
-
       table {
         width: 100%;
         border-collapse: separate;
-        border-spacing: 0;
+        border-spacing: 5px;
+        margin: auto;
+        background-color: #a7d3d3;
       }
-
       th,
       td {
+        border: 2px solid #5f9ea0;
         padding: 10px;
-        background-color: #b0e0e0;
-        border: 2px solid #000;
+        text-align: center;
+        border-radius: 10px;
       }
-
-      /* Header row styling */
       th {
         font-weight: bold;
       }
-
-      /* Rounded corners for first column */
-      th:first-child,
-      td:first-child {
-        border-left: 2px solid #000;
-        border-radius: 15px 0 0 15px;
+      .shapes-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
       }
-
-      /* Rounded corners for last column */
-      th:last-child,
-      td:last-child {
-        border-right: 2px solid #000;
-        border-radius: 0 15px 15px 0;
+      .shape {
+        width: 80px;
+        height: 50px;
+        border: 2px solid green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
       }
-
-      /* Remove double borders between cells */
-      th:not(:last-child),
-      td:not(:last-child) {
-        border-right: none;
-      }
-
-      tr:not(:last-child) td {
-        border-bottom: none;
+      .oval {
+        height: 50px;
+        border-radius: 50px;
+        width: 100px;
       }
     </style>
   </head>
   <body>
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Age</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-          </tr>
-          <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>80</td>
-          </tr>
-        </tbody>
-      </table>
+    <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+      </tr>
+    </table>
+
+    <div class="shapes-container">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape oval"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
     </div>
   </body>
 </html>
