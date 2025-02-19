@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form id="myForm">
+      <label>First Name: <input type="text" id="firstName" /></label>
+      <span class="error" id="firstNameError"
+        >Please supply your first name</span
+      >
+
+      <label>Last Name: <input type="text" id="lastName" /></label>
+      <span class="error" id="lastNameError">Please supply your last name</span>
+
+      <label>Email: <input type="email" id="email" /></label>
+      <span class="error" id="emailError"
+        >Please supply your email address</span
+      >
+
+      <label>Phone #: <input type="text" id="phone" /></label>
+      <span class="error" id="phoneError">Please supply your phone number</span>
+
+      <label>Address: <input type="text" id="address" /></label>
+      <span class="error" id="addressError"
+        >Please supply your street address</span
+      >
+
+      <label>City: <input type="text" id="city" /></label>
+      <span class="error" id="cityError">Please supply your city</span>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let valid = true;
+
+          function validateField(id) {
+            const field = document.getElementById(id);
+            const error = document.getElementById(id + "Error");
+            if (!field.value.trim()) {
+              error.style.display = "block";
+              valid = false;
+            } else {
+              error.style.display = "none";
+            }
+          }
+
+          validateField("firstName");
+          validateField("lastName");
+          validateField("email");
+          validateField("phone");
+          validateField("address");
+          validateField("city");
+
+          if (valid) alert("Form submitted successfully!");
+        });
+    </script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      form {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+      input {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+      }
+      .error {
+        display: none;
+        color: red;
+        font-size: 12px;
+      }
+      button {
+        background-color: orange;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </body>
+</html>

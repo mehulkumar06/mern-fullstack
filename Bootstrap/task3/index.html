@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Table</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      .pricing-table {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+      .plan {
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 200px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+      .plan h3 {
+        margin-bottom: 10px;
+      }
+      .plan .price {
+        font-size: 24px;
+        color: #333;
+      }
+      .plan button {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pricing</h1>
+    <p>Quickly build an effective pricing table for your customers with this</p>
+    <p>
+      Bootstrap example. It's built with default Bootstrap components and
+      utilities with little customization
+    </p>
+
+    <div class="pricing-table">
+      <div class="plan">
+        <h3>Free</h3>
+        <p class="price">$0 / mo</p>
+        <p>10 users included</p>
+        <p>2 GB storage</p>
+        <p>Email support</p>
+        <p>Help center access</p>
+        <button>Sign up for free</button>
+      </div>
+      <div class="plan">
+        <h3>Pro</h3>
+        <p class="price">$15 / mo</p>
+        <p>20 users included</p>
+        <p>10 GB storage</p>
+        <p>Priority Email upport</p>
+        <p>Help center access</p>
+        <button>Get started</button>
+      </div>
+      <div class="plan">
+        <h3>Enterprise</h3>
+        <p class="price">$29 / mo</p>
+        <p>30 users included</p>
+        <p>15 GB storage</p>
+        <p>Phone and email support</p>
+        <p>Help center access</p>
+        <button>Contact us</button>
+      </div>
+    </div>
+  </body>
+</html>

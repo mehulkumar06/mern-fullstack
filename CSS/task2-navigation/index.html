@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 50px;
+        padding: 20px;
+      }
+
+      .nav-section {
+        flex: 1;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      /* Vertical Navigation */
+      .vertical-nav {
+        width: 200px;
+        border: 1px solid #000;
+      }
+
+      .vertical-nav .home {
+        background: #ffa500;
+        color: white;
+        padding: 15px;
+        font-size: 24px;
+      }
+
+      .vertical-nav .links {
+        background: #add8e6;
+        padding: 15px 0;
+      }
+
+      .vertical-nav a {
+        display: block;
+        padding: 10px 15px;
+        color: blue;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      /* Horizontal Navigation */
+      .horizontal-nav {
+        width: 100%;
+        border: 1px solid #000;
+        display: flex;
+        height: 50px;
+      }
+
+      .horizontal-nav .home {
+        background: #808080;
+        color: white;
+        padding: 15px 30px;
+      }
+
+      .horizontal-nav a {
+        background: #d3d3d3;
+        padding: 15px 30px;
+        color: blue;
+        text-decoration: none;
+        border-left: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-section">
+      <h2>Vertical Navigation Bar</h2>
+      <div class="vertical-nav">
+        <div class="home">Home</div>
+        <div class="links">
+          <a href="#">Java</a>
+          <a href="#">CSS</a>
+          <a href="#">HTML</a>
+          <a href="#">Bootstrap</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <h2>Horizontal Navigation Bar</h2>
+      <div class="horizontal-nav">
+        <div class="home">Home</div>
+        <a href="#">Java</a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+      </div>
+    </div>
+  </body>
+</html>

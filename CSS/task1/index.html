@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .table-container {
+        font-family: Arial, sans-serif;
+        width: 800px;
+        margin: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        background-color: #b0e0e0;
+        border: 2px solid #000;
+      }
+
+      /* Header row styling */
+      th {
+        font-weight: bold;
+      }
+
+      /* Rounded corners for first column */
+      th:first-child,
+      td:first-child {
+        border-left: 2px solid #000;
+        border-radius: 15px 0 0 15px;
+      }
+
+      /* Rounded corners for last column */
+      th:last-child,
+      td:last-child {
+        border-right: 2px solid #000;
+        border-radius: 0 15px 15px 0;
+      }
+
+      /* Remove double borders between cells */
+      th:not(:last-child),
+      td:not(:last-child) {
+        border-right: none;
+      }
+
+      tr:not(:last-child) td {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+          </tr>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>80</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
